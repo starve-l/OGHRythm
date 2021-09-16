@@ -134,7 +134,7 @@ client.on('interactionCreate', async (interaction: Interaction) => {
 			await interaction.followUp(`${English.COMMANDS_PLAY_DONE}**${track.title}**`);
 		} catch (error) {
 			console.warn(error);
-			await interaction.reply(English.COMMANDS_PLAY_ERROR);
+			await interaction.followUp(English.COMMANDS_PLAY_ERROR);
 		}
 	} else if (interaction.commandName === 'skip') {
 		if (subscription) {
